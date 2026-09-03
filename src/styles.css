@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Fraunces", Georgia, serif;
+
+  --color-bg: #14161f;
+  --color-raised: #1b1e2b;
+  --color-ink: #eceae6;
+  --color-dim: #9b9cae;
+  --color-line: #2a2d3d;
+  --color-lime: #c8ff4d;
+  --color-crimson: #e6394b;
+  --color-status-plan: #8c8fe0;
+  --color-status-watching: #c8ff4d;
+  --color-status-completed: #4de0a0;
+  --color-status-hold: #e0b84d;
+  --color-status-dropped: #e6394b;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+}
+
+/* ---- Themes (override CSS variables) ---- */
+html[data-theme="light"] {
+  --color-bg: #f4f2ec;
+  --color-raised: #ffffff;
+  --color-ink: #1a1c24;
+  --color-dim: #6b6d7c;
+  --color-line: #e2e0d8;
+  --color-lime: #3d7a1c;
+  --color-crimson: #c62828;
+  --color-status-plan: #5c63c7;
+  --color-status-watching: #3d7a1c;
+  --color-status-completed: #0d8a5a;
+  --color-status-hold: #b8860b;
+  --color-status-dropped: #c62828;
+}
+
+html[data-theme="sakura"] {
+  --color-bg: #1a1218;
+  --color-raised: #241820;
+  --color-ink: #f5e6ec;
+  --color-dim: #b89aa6;
+  --color-line: #3a2832;
+  --color-lime: #ff8fab;
+  --color-crimson: #ff4d6d;
+  --color-status-plan: #c4a1ff;
+  --color-status-watching: #ff8fab;
+  --color-status-completed: #7ee0c3;
+  --color-status-hold: #ffc857;
+  --color-status-dropped: #ff4d6d;
+}
+
+html[data-theme="ocean"] {
+  --color-bg: #0c1520;
+  --color-raised: #132033;
+  --color-ink: #e6f0f5;
+  --color-dim: #8ba3b5;
+  --color-line: #1e3044;
+  --color-lime: #4fd1c5;
+  --color-crimson: #f56565;
+  --color-status-plan: #7b9cff;
+  --color-status-watching: #4fd1c5;
+  --color-status-completed: #48bb78;
+  --color-status-hold: #ecc94b;
+  --color-status-dropped: #f56565;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html,
+  body {
+    background: var(--color-bg);
+    color: var(--color-ink);
+    min-height: 100%;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  input,
+  textarea,
+  select {
+    font-family: inherit;
+    color: inherit;
+  }
+
+  /* Equalize interactive surfaces */
+  select,
+  input[type="text"],
+  input:not([type]),
+  textarea {
+    border-radius: var(--radius-sm);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  .card-surface {
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-line);
+    background: var(--color-raised);
+  }
+}

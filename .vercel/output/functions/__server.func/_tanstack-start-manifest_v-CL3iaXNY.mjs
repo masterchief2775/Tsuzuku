@@ -1,0 +1,50 @@
+//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-CL3iaXNY.js
+var tsrStartManifest = () => ({ routes: {
+	__root__: {
+		filePath: "D:/Projet AnimeList/tsuzuku-v2-ui-fix/tsuzuku-watchlist-sync/src/routes/__root.tsx",
+		children: [
+			"/",
+			"/login",
+			"/share/$token",
+			"/api/auth/$"
+		],
+		preloads: [
+			"/assets/index-NxeQp1jJ.js",
+			"/assets/react-SIfiwpqq.js",
+			"/assets/preload-helper-CfabPmSm.js"
+		],
+		scripts: [{ attrs: {
+			type: "module",
+			async: !0,
+			src: "/assets/index-NxeQp1jJ.js"
+		} }]
+	},
+	"/": {
+		filePath: "D:/Projet AnimeList/tsuzuku-v2-ui-fix/tsuzuku-watchlist-sync/src/routes/index.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/routes-BKfR_pT-.js",
+			"/assets/share-DLE29gZ1.js",
+			"/assets/use-current-user-BdlTWJX4.js",
+			"/assets/client-DRhaju3Z.js",
+			"/assets/utils-Dk_44zMo.js"
+		]
+	},
+	"/login": {
+		filePath: "D:/Projet AnimeList/tsuzuku-v2-ui-fix/tsuzuku-watchlist-sync/src/routes/login.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/login-leojaJfZ.js",
+			"/assets/use-current-user-BdlTWJX4.js",
+			"/assets/client-DRhaju3Z.js",
+			"/assets/utils-Dk_44zMo.js"
+		]
+	},
+	"/share/$token": {
+		filePath: "D:/Projet AnimeList/tsuzuku-v2-ui-fix/tsuzuku-watchlist-sync/src/routes/share.$token.tsx",
+		children: void 0,
+		preloads: ["/assets/share._token-CpDoI_gq.js", "/assets/share-DLE29gZ1.js"]
+	}
+} });
+//#endregion
+export { tsrStartManifest };
